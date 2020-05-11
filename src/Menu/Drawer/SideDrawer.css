@@ -6,7 +6,7 @@
 
 .side_Drawer {
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(46, 60, 61, 1);
     opacity: 0.95;
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -35,6 +35,7 @@
     margin: 0.5rem 0;
 }
 
+.categorias_sd_title,
 .side_Drawer a {
     color: white;
     text-decoration: none;
@@ -51,4 +52,10 @@
     .side_Drawer {
         display: none;
     }
+}
+
+.categorias_sd a {
+    font-size: 0.9rem;
+    /* background-colo  r: black; */
+    margin-left: 15px;
 }

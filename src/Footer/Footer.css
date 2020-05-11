@@ -1,0 +1,40 @@
+  
+.footer {
+    background-color: rgba(46, 60, 61, 1);
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    color: rgba(239, 206, 189, 1);
+}
+
+.socialMediaTags {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 0px 0;
+    width: 100%;
+}
+
+a.social {
+    margin: 0 1.5rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+
+a.social:hover {
+    transform: translateY(-3px); 
+}
+
+a.instagram {
+    color: rgba(255, 229, 212, 1)
+}
+
+a.twitter {
+    color: rgba(255, 229, 212, 1)
+}
+
+a.youtube {
+    color: rgba(255, 229, 212, 1)
+}

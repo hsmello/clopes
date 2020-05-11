@@ -1,8 +1,19 @@
 .global_home {
-    background-color: tomato;
-    color: teal;
+    background-color: rgba(239,206,189,1);
+}
+
+.first_picture {
+    width: 500px;
+    margin: 100px 300px;
 }
 
 body {
-    background-color: salmon;
+    background-color:  rgba(239,206,189,1);
+}
+
+@media (max-width: 769px) {
+    .first_picture {
+        width: 100%;
+        margin: 100px 0px 20px;
+    }
 }

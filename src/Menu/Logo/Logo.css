@@ -1,0 +1,20 @@
+.all_logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 200px;
+    margin: 0 8rem;
+}
+
+.logo_ondulindas {
+    width: 200px;
+    padding: 50px 0px 0px;
+}
+
+.logo_photo {
+    width: 200px;
+    padding: 10px;
+}

@@ -10,7 +10,7 @@ function DrawerButton(props) {
         >
 
             <MenuIcon
-                fontSize="large"
+                fontSize="default"
             />
         </IconButton>
     );

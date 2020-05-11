@@ -1,13 +1,13 @@
 import React from 'react';
-import Pic from '../../Images/backgroundtest.jpg'
 import './Home.css'
+import Carol from '../../Images/Carol.jpeg'
 
 function Home() {
     return (
         <div className="global_home">
-            <div>
+            <div >
 
-            {/* <img src={Pic} /> */}
+                <img className="first_picture" src={Carol} />
 
             </div>
         </div>

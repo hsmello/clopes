@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Toolbar from './Toolbar/Toolbar';
+import Toolbar from './Toolbar/Toolbar2';
 import SideDrawer from './Drawer/SideDrawer';
 import Backdrop from './Backdrop/Backdrop';
 
@@ -24,7 +24,7 @@ function ResponsiveMenu() {
     return (
         <div>
 
-            <Toolbar 
+            <Toolbar
                 onClick={handleDrawerClick}
                 show={sideDrawerOpen}    
             />

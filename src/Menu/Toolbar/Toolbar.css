@@ -1,22 +1,203 @@
 .header {
+    display: flex;
+    background-color: rgba(239, 206, 189, 1)
+}
+
+.nav_area {
+    height: 10vh;
     width: 100%;
-    background-color: rgba(0,0,0,0.4);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    width: 150px;
+    /* margin-left: 0.5rem; */
+}
+
+.first_logo,
+.second_logo {
+    width: 50%;
+    margin: 10px;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+@media (max-width: 769px) {
+    .first_logo, 
+    .second_logo {
+        display: none;
+    }
+}
+
+.menu_button { /* mobile button */
+    color: #fff;
+    padding: 4px;
+    height: 100%;
+    margin-top: auto;
+}
+
+.menu_button img {
+    width: 50px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+
+@media (min-width: 769px) {
+    .menu_button {
+        display: none;
+    }
+}
+
+.menu_options {
+    background-color: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_options :hover {
+    color: whitesmoke;
+    
+}
+
+.menu_options a, /* <Link> */
+.menu_options button {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(165, 52, 48, 1);
+    font-weight: bolder;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    height: 100%;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.categorias {
+    position: relative;
+}
+
+.categorias :hover~.tessst{ 
+    display: flex;
+}
+
+.tessst {
+    /* margin-top: 5px; */
+    position: absolute;
+    padding: 0px;
+    display: none;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    width: 180px;
+    height: 200px;
+    background: whitesmoke;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+
+.categorias li {
+    width: 100%;
+    height: 100%;
+    /* padding-top: 10px; */
+    text-align: center;
+    line-height: 50px;
+}
+
+.categorias li :hover {
+    background-color: red;
+}
+
+.categorias a {
+    width: 100%;
+    padding: 0px;
+    margin: auto;
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    /* background-color: whitesmoke; */
+}
+
+.categorias button:focus, .tessst {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+
+.categorias_options {
+    width: 100%;
+    height: 25%;
+}
+
+.categorias_options :hover {
+    background-color: red;
+}
+.cabelos_options li {
+    /* display: none; */
+    height: 100%;
+    background-color: whitesmoke;
+    position: relative;
+    /* float: left; */
+    display: inline-block;
+    color: black;
+}
+
+
+
+
+
+@media (max-width: 769px) {
+    .menu_options {
+        display: none;
+    }
+    .nav_area {
+        background-color: rgba(46, 60, 61, 0.2);
+    }
+    
+}
+
+
+
+/*
+VERSION 1
+
+.nav_area {
+    width: 100%;
+    background-color: rgba(46, 60, 61, 0.6);
     position: fixed;
 }
 
-.header ul {
+.nav_area ul {
     text-align: center;
     margin:  0;
     height: 100%;
 }
 
-.header ul li{
+.nav_area ul li{
     list-style: none;
     display: inline-block;
     height: 100%;
 }
 
-.header ul li a{
+.nav_area ul li a{
     display: block;
     text-decoration: none;
     text-transform: uppercase;
@@ -28,28 +209,18 @@
     height: 100%;
 }
 
-.header ul li a:hover {
-    background-color: rgb(0, 0, 0, 0.5);
-}
-
-.menu_button {
+.nav_area ul li button{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
     color: #fff;
-    padding: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 25px;
+    letter-spacing: 2px;
     height: 100%;
 }
 
-@media (min-width: 769px) {
-    .menu_button {
-        display: none;
-    }
-}
-
-@media (max-width: 769px) {
-    .menu_options {
-        display: none;
-    }
-    .header {
-        background-color: rgba(0,0,0,0.1);
-    }
-    
-}
+.nav_area ul li a:hover {
+    background-color: rgba(46, 60, 61, 0.8);
+} */

@@ -1,26 +1,50 @@
 import React from 'react';
 import './Toolbar.css'
-
+import Logo from '../../Images/logo.png'
+import Logo_Photo from '../../Images/logo_photo.png'
 import DrawerButton from '../DrawerButton/DrawerButton';
+import { Link } from 'react-router-dom';
 
+// https://www.youtube.com/watch?v=ozE-YFiaVPU
 function Toolbar(props) {
-
 
     return (
         <header className="header">
-            <nav>
+            <div className="first_logo" >
+                <Link  to="/home"><img className="logo" src={Logo} alt="" /> </Link>
+            </div>
+            <nav className="nav_area">
                 <div className="menu_button">
                     <DrawerButton onClick={props.onClick} />
+                    <Link  to="/home"><img className="logo" src={Logo} alt="" /> </Link>
                 </div>
                 <div className="menu_options">
-                    <ul>
-                        <li><a href="/">OP1</a></li>
-                        <li><a href="/sobre">SOBRE</a></li>
-                        <li><a href="/">OP2</a></li>
-                        <li><a href="/">OP3</a></li>
-                    </ul>
+
+                    <Link to="/sobre" >SOBRE</Link>
+
+                    <div className="categorias">
+                        <button>CATEGORIAS</button>
+
+                        <div className="tessst" > 
+                            <div className="categorias_options">
+
+                                <li><Link to="/cabelos">CABELOS</Link></li>
+
+                                <li><Link to="/beleza">BELEZA</Link></li>
+                                <li><Link to="/moda">MODA</Link></li>
+                                <li><Link to="/entretenimento">ENTRETENIMENTO</Link></li>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <Link to="/ondulindas">ONDULINDAS</Link>
+                    <Link to="/contato">CONTATO</Link>
                 </div>
             </nav>
+            <div className="second_logo" >
+                <img className="logo" src={Logo_Photo} alt="" />
+            </div>
         </header>
     );
 };
