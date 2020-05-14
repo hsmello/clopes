@@ -41,12 +41,13 @@ function Toolbar(props) {
                     <Link to="/sobre" >SOBRE</Link>
                     <div className="categorias">
                         <button
-                            onClick={handleCategoriasClick}
+                            // onClick={handleCategoriasClick}
                         >CATEGORIAS</button>
                         <div className="categorias_options">
-                            {categoriasShow ?
+                            {/* {categoriasShow ?
                                 <CategoriasBlock /> :
-                                null}
+                                null} */}
+                                <CategoriasBlock />
                         </div>
                     </div>
                     <Link to="/ondulindas">ONDULINDAS</Link>

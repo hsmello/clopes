@@ -59,13 +59,27 @@ export default class Cabelos extends React.Component {
 
     render() {
 
-
+        
         return (
             <div>
-                <button onClick={this.requestPost} />
-                Cabelos
-                <button onClick={this.handlePosts} />
+                
+            {/* {this.requestPost}
+            {this.handlePosts} */}
+                
+                <button label="test" onClick={this.requestPost}>
+                    rodar api
+                </button>
 
+                <button onClick={this.handlePosts} >
+                    filtrar entretenimento
+                </button>
+
+                {/* <div>
+                    {this.state.all[0].title}
+                </div>
+                <div>
+                    {this.state.all[0].body}
+                </div> */}
             </div>
         )
     };

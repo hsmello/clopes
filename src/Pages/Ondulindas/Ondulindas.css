@@ -1,8 +1,27 @@
-.ondulindas_allpage {
+/* .ondulindas_allpage {
     margin-top: 80px;
+} */
+
+.page_title {
+    display: flex;
+    justify-content: space-between;
 }
 
+.logo_ondulindas {
+    width: 300px;
+}
+
+.page_text {
+    font-size: 18px;
+    padding: 20px 50px;
+}
+
+
+
 .telegram {
-    color: black;
-    /* color: rgb(0, 136, 204); */
+    color: rgb(0, 136, 204);
+}
+
+.telegram:hover {
+    color: rgb(0, 105, 158);
 }
