@@ -10,7 +10,7 @@ function Sobre() {
                 O que você sabe sobre a Carol Lopes?
                 </div>
             <div className="sobre" >
-                <img src={Pic} className="pic" />
+                <img src={Pic} className="pic" alt="" />
                 <div >
 
                     <div className="text_body" >

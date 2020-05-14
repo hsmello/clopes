@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Toolbar2.css'
-import Logo from '../../Images/logo.png'
+import Logo from '../../Images/logo_nb.png'
 import Logo_Photo from '../../Images/logo_photo.png'
 import DrawerButton from '../DrawerButton/DrawerButton';
 import { Link } from 'react-router-dom';
@@ -53,9 +53,9 @@ function Toolbar(props) {
                     <Link to="/contato">CONTATO</Link>
                 </div>
             </nav>
-            <div className="second_logo" >
-                <img className="logo" src={Logo_Photo} alt="" />
-            </div>
+            {/* <div className="second_logo" > */}
+                {/* <img className="logo" src={Logo_Photo} alt="" /> */}
+            {/* </div> */}
         </header>
     );
 };

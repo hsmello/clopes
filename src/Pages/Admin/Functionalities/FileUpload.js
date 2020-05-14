@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MyButton from '../../../Imports/MyButton'
+import MyButton from '../../../Imports/MyButton';
 
 export default class FileUpload extends Component {
 
@@ -14,8 +14,31 @@ export default class FileUpload extends Component {
     
     }
 
-    fileUploadHandler = () => {
+    async fileUploadHandler() {
          
+        if (!this.state.selectedFile) {
+            return;
+        }
+
+        try {
+
+            let res = await fetch('http://localhost:3001/admin', {
+                method: 'post',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    // title
+                })
+            })
+
+        }
+
+        catch(e) {
+
+        }
+
     }
 
     render() {

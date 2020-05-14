@@ -1,12 +1,14 @@
   
 .footer {
-    background-color: rgba(46, 60, 61, 1);
+    background-color: #4e6466;
+    overflow: auto;
     color: white;
 }
 
 .copyright {
+    background-color: #4e6466;
     text-align: center;
-    color: rgba(239, 206, 189, 1);
+    color: rgba(255, 229, 212, 1)
 }
 
 .socialMediaTags {
@@ -24,7 +26,8 @@ a.social {
 }
 
 a.social:hover {
-    transform: translateY(-3px); 
+    /* transform: translateY(-3px);  */
+    color: rgb(29, 38, 39);
 }
 
 a.instagram {

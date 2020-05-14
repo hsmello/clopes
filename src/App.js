@@ -15,7 +15,6 @@ import Cabelos from './Pages/Categorias/Cabelos/Cabelos';
 
 function IsUserLoggedIn() {
   const token = localStorage.getItem('token')
-  console.log(token)
   if (!token) {
     return false;
   }
@@ -24,7 +23,7 @@ function IsUserLoggedIn() {
     console.log(jwtDecoded)
     return true;
   }
-  catch(e) {
+  catch (e) {
     return false;
   }
 };
@@ -40,6 +39,9 @@ function App() {
         <Route exact path="/contato" component={Contato} />
         <Route exact path="/ondulindas" component={Ondulindas} />
         <Route exact path="/cabelos" component={Cabelos} />
+        <Route exact path="/">
+          <Redirect to="/home" />
+        </Route>
       </>
     );
     if (IsUserLoggedIn()) {
@@ -53,6 +55,7 @@ function App() {
       return (
         <>
           {allRoutes}
+
           <Route exact path="/admin">
             <Redirect to="/home" />
           </Route>
