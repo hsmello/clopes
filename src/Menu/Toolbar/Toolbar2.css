@@ -1,7 +1,15 @@
 .header {
     display: flex;
-    background-color: rgb(235, 235, 49);
+    background-color: #B39BC8;
     /* background-color: rgba(239, 206, 189, 1) */
+}
+
+@media (max-width: 769px) {
+    .header {
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+    }
 }
 
 .nav_area {
@@ -65,7 +73,8 @@
 }
 
 .menu_options :hover {
-    color: rgba(46, 60, 61, 1);
+    /* color: rgba(46, 60, 61, 1); */
+    color: rgb(120, 96, 141);;
 }
 
 .menu_options a, /* <Link> */
@@ -73,7 +82,8 @@
     display: block;
     text-decoration: none;
     text-transform: uppercase;
-    color: rgba(165, 52, 48, 1);
+    /* color: rgba(165, 52, 48, 1); */
+    color: #F0EBF4;
     font-weight: bolder;
     font-size: 22px;
     font-weight: 600;

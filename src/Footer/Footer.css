@@ -1,14 +1,14 @@
   
 .footer {
-    background-color: #4e6466;
+    background-color: #B39BC8;
     overflow: auto;
-    color: white;
+    color: #F0EBF4
 }
 
 .copyright {
-    background-color: #4e6466;
+    background-color: #B39BC8;
     text-align: center;
-    color: rgba(255, 229, 212, 1)
+    color: #F0EBF4
 }
 
 .socialMediaTags {
@@ -27,17 +27,17 @@ a.social {
 
 a.social:hover {
     /* transform: translateY(-3px);  */
-    color: rgb(29, 38, 39);
+    color: rgb(120, 96, 141);
 }
 
 a.instagram {
-    color: rgba(255, 229, 212, 1)
+    color: #F0EBF4
 }
 
 a.twitter {
-    color: rgba(255, 229, 212, 1)
+    color: #F0EBF4
 }
 
 a.youtube {
-    color: rgba(255, 229, 212, 1)
+    color: #F0EBF4
 }

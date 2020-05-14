@@ -1,12 +1,12 @@
 .menu_title {
-    color: white;
+    color: #F0EBF4;
     letter-spacing: 4px;
     margin-left: 25px;
 }
 
 .side_Drawer {
     height: 100%;
-    background: rgb(46, 60, 61);
+    background: rgb(120, 96, 141);
     opacity: 0.95;
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
     position: fixed;
