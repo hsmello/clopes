@@ -4,30 +4,36 @@ import GetCategoryPostData from '../Functionalities/GetCategoryPostData';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
-// import Buffer from 'safe-buffer';
+import titleArray from './titles.json';
 
 export default function CategoryPage({ match }) {
 
     const [data, setData] = useState([]);
+    const [titleIndex, setTitleIndex] = useState('')
 
     useEffect(() => {
+        for (var i = 0; i < titleArray.length; i++) {
+            if (titleArray[i].url === match.path.substr(1)) {
+                setTitleIndex(i)
+            }
+        }
         async function fetchData() {
             const posts = await GetCategoryPostData(match.path.substr(1));
             setData(posts);
-            console.log(posts)
+            // setTest(match.path.substr(1))
         }
         fetchData();
         AOS.init({
             duration: 1000,
             once: true,
         });
-    }, [1]);
 
+    }, [1]);
 
     return (
         <div>
             <div className="page_title" >
-                {match.path.substr(1).toUpperCase()}
+               {titleIndex ? titleArray[titleIndex].title : ""}
             </div>
             {data.reverse().map((post, index) => {
 

@@ -53,6 +53,7 @@
 @media (max-width: 769px) {
     .page_title {
         padding: 55px 0px 20px;
+        margin: 20px 0px;
     }
     .post_card {
         width: 90%;

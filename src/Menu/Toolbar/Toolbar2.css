@@ -24,7 +24,6 @@
 
 .logo {
     width: 110px;
-    /* margin-left: 0.5rem; */
 }
 
 .first_logo,
@@ -68,12 +67,10 @@
     background-color: none;
     width: 100%;
     display: flex;
-    /* align-items: flex-end; */
     justify-content:  flex-end;
 }
 
 .menu_options :hover {
-    /* color: rgba(46, 60, 61, 1); */
     color: rgb(120, 96, 141);;
 }
 
@@ -82,7 +79,6 @@
     display: block;
     text-decoration: none;
     text-transform: uppercase;
-    /* color: rgba(165, 52, 48, 1); */
     color: #F0EBF4;
     font-weight: bolder;
     font-size: 22px;
@@ -103,22 +99,39 @@
 
 .categorias:hover .categorias_options {
     display: block;
-
 }
 
 .categorias_options {
     position: absolute;
-    left: 0;
     background-color: rgb(144, 120, 165);
     border-radius: 7px;
     display: none;
 }
 
+.categorias_options button,
 .categorias_options a{
     font-size: 18px;
     color: white;
 }
 
+.cabelos_suboptions a {
+    font-size: 13px;
+    background-color: rgb(123, 97, 148);
+}
+
+.cabelos_suboptions {
+    display: none;
+    position: absolute;
+    transform: translate(100%, -40px);
+}
+
+.cabelos_div {
+    position: relative;
+}
+
+.cabelos_div:hover .cabelos_suboptions {
+   display: block;
+}
 
 @media (max-width: 769px) {
     .menu_options {

@@ -6,7 +6,6 @@ import DrawerButton from '../DrawerButton/DrawerButton';
 import { Link } from 'react-router-dom';
 import onClickOutside from "react-onclickoutside";
 
-// https://www.youtube.com/watch?v=ozE-YFiaVPU
 function Toolbar(props) {
 
     const [categoriasShow, serCategoriasShow] = useState(false)
@@ -17,12 +16,26 @@ function Toolbar(props) {
         serCategoriasShow(true)
     }
 
+    const CabelosBlock = () => (
+        <>
+            <Link to="/cabelos-cuidados">Cuidados</Link>
+            <Link to="/cabelos-finalizacao">Finalização</Link>
+            <Link to="/cabelos-inspiracoes">Inspirações</Link>
+            <Link to="/cabelos-produtos-e-resenhas">Produtos e Resenhas</Link>
+        </>
+    )
+
     const CategoriasBlock = () => (
         <>
-        <Link to="/cabelos" >CABELOS</Link>
-        <Link to="/beleza" >BELEZA</Link>
-        <Link to="/moda"> MODA</Link>
-        <Link to="/entretenimento" >ENTRETENIMENTO</Link> 
+            <div className='cabelos_div' >
+                <button>CABELOS ></button>
+                <div className="cabelos_suboptions">
+                    <CabelosBlock />
+                </div >
+            </div>
+            <Link to="/beleza" >BELEZA</Link>
+            <Link to="/moda"> MODA</Link>
+            <Link to="/entretenimento" >ENTRETENIMENTO</Link>
         </>
     )
 
@@ -41,22 +54,15 @@ function Toolbar(props) {
                     <Link to="/sobre" >SOBRE</Link>
                     <div className="categorias">
                         <button
-                            // onClick={handleCategoriasClick}
                         >CATEGORIAS</button>
                         <div className="categorias_options">
-                            {/* {categoriasShow ?
-                                <CategoriasBlock /> :
-                                null} */}
-                                <CategoriasBlock />
+                            <CategoriasBlock />
                         </div>
                     </div>
                     <Link to="/ondulindas">ONDULINDAS</Link>
                     <Link to="/contato">CONTATO</Link>
                 </div>
             </nav>
-            {/* <div className="second_logo" > */}
-                {/* <img className="logo" src={Logo_Photo} alt="" /> */}
-            {/* </div> */}
         </header>
     );
 };

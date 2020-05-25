@@ -44,13 +44,13 @@ export default function MyDropDown(props) {
                     }}
                 >
                     <option aria-label="None" value="" />
-                    <option >Cabelos - Finalização</option>
-                    <option >Cabelos - Produtos e Resenhas</option>
-                    <option >Cabelos - Cuidados</option>
-                    <option >Cabelos - Inspirações</option>
-                    <option >Beleza</option>
-                    <option >Moda</option>
-                    <option >Entretenimento</option>
+                    <option value="cabelos-finalizacao">Cabelos - Finalização</option>
+                    <option value="cabelos-produtos-e-resenhas" >Cabelos - Produtos e Resenhas</option>
+                    <option value="cabelos-cuidados" >Cabelos - Cuidados</option>
+                    <option value="cabelos-inspiracoes">Cabelos - Inspirações</option>
+                    <option value="beleza">Beleza</option>
+                    <option value="moda">Moda</option>
+                    <option value="entretenimento">Entretenimento</option>
                 </Select>
             </FormControl>
 

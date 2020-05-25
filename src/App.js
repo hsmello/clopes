@@ -40,7 +40,10 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/contato" component={Contato} />
         <Route exact path="/ondulindas" component={Ondulindas} />
-        <Route exact path="/cabelos" component={Cabelos} />
+        <Route exact path="/cabelos-cuidados" component={CategoryPage} />
+        <Route exact path="/cabelos-finalizacao" component={CategoryPage} />
+        <Route exact path="/cabelos-inspiracoes" component={CategoryPage} />
+        <Route exact path="/cabelos-produtos-e-resenhas" component={CategoryPage} />
         <Route exact path="/moda" component={CategoryPage} />
         <Route exact path="/beleza" component={CategoryPage} />
         <Route exact path="/entretenimento" component={CategoryPage} />
