@@ -9,15 +9,22 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@tinymce/tinymce-react": "^3.6.0",
+    "anchorme": "^2.1.2",
+    "aos": "^2.3.4",
     "cors": "^2.8.5",
+    "instagram-scraping": "^1.0.13",
     "jwt-decode": "^2.2.0",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-notifications-component": "^2.4.0",
     "react-onclickoutside": "^6.9.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "safe-buffer": "^5.2.1",
+    "tinymce": "^5.3.0"
   },
   "scripts": {
     "start": "node server.js",

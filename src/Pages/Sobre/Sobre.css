@@ -1,16 +1,17 @@
 .sobre {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-
 }
 
 .pic {
-  width: 500px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin: 4% 0% 8% 21%;
+  width: 25%;
+  min-width: 350px;
+  height: 500px;
+  /* display: block; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  margin: 4% 0% 8% 15%;
   border-style: solid;
   border-color: rgb(141, 120, 160);
   border-radius: 7px;
@@ -24,25 +25,32 @@
   width: 50%;
   text-align: center;
   padding: 0px 30px;
-  /* background-color: violet; */
 }
 
 .text_body {
-    padding: 0px 25px;
+    margin-top: 7%;
+    padding: 0px 0px 0px 25px;
     color: rgba(46, 60, 61, 1);
     font-weight: bold;
     margin-left: 20px;
-    width: 60%;
+    width: 70%;
     border-radius: 100px;
-    text-align: center;
+    text-align: justify;
     font-size: 19px;
     font-family: 'Poppins', sans-serif;
+}
+
+.text_signature {
+  margin-top: 20px;
+  text-align: justify;
 }
 
 @media (max-width: 769px) {
   .pic {
     width: 100%;
+    border-radius: 0px;
     margin: 0;
+    height: auto;
   }
   .sobre {
     display: grid;
@@ -58,5 +66,32 @@
     margin-top: 30px;
     margin-bottom: 30px;
     width: 90%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1270px) {
+  .pic {
+    width: 70%;
+    border-radius: 0px;
+    margin: 0;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+  }
+  .sobre {
+    display: grid;
+  }
+  .text_title {
+    font-size: 23px;
+    width: 100%;
+    padding: 15px 0 ;
+  }
+  .text_body {
+    padding: 0px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 80%;
   }
 }

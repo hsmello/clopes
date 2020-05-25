@@ -18,6 +18,7 @@ export default function MyTextareaAutosize(props) {
         <div className={classes.root} >
 
             <TextareaAutosize
+                value={props.value}
                 aria-label="minimum height"
                 rowsMin={15}
                 cols={80}

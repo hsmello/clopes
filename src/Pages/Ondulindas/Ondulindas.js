@@ -7,8 +7,9 @@ export default function Ondulindas() {
     return (
         <div className="ondulindas_allpage" >
             <div className="page_title">
-                PAGE TITLE HERE
+                ONDULINDAS
             </div>
+                <img className="logo_ondulindas" src={PicOndulindas} alt="" />
 
             <div className="page_text" >
 
@@ -19,9 +20,12 @@ export default function Ondulindas() {
                 indefinidas mas sempre destaco que essas
                 "imperfeições" fazem com que ele seja único
                 e LINDO!
-                <img className="logo_ondulindas" src={PicOndulindas} alt="" />
             </div>
-            <div>
+            <div className="telegram_div" >
+                <hr/>
+                <p> 
+                    Entre no nosso grupo <span>do Telegram!</span>
+                   </p> <hr/>
                 <a
                     className="telegram"
                     href="https://twitter.com/CarolLopesblog"

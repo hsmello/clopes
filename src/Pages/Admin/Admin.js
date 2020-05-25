@@ -3,8 +3,14 @@ import MyTextField from '../../Imports/MyTextField';
 import MyDropdown from '../../Imports/MyDropdown';
 import './Admin.css'
 import MyTextareaAutosize from '../../Imports/MyTextareaAutosize';
-// import PostStore from './Functionalities/PostStore';
+import { Editor } from '@tinymce/tinymce-react';
+import ReactNotification from 'react-notifications-component';
+import SuccessNotification from '../Functionalities/SuccessNotification';
+import FailNotification from '../Functionalities/FailNotification';
 import MyButton from '../../Imports/MyButton';
+
+const callSuccessNotification = SuccessNotification();
+const callFailNotification = FailNotification();
 
 class Admin extends React.Component {
 
@@ -15,7 +21,10 @@ class Admin extends React.Component {
             postCategory: '',
             postBody: '',
             postBodyCount: 0,
+            postDate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()),
             selectedFile: null,
+            postLink: '',
+            disableButton: false,
         }
         // for it to be possible calling this inside fileUploadHandler method
         this.fileUploadHandler = this.fileUploadHandler.bind(this);
@@ -28,8 +37,11 @@ class Admin extends React.Component {
             postTitle: '',
             postCategory: '',
             postBody: '',
-            postBodyCount: '',
+            postBodyCount: 0,
+            postDate: '',
             selectedFile: null,
+            postLink: '',
+            disableButton: false,
         })
     }
 
@@ -45,16 +57,22 @@ class Admin extends React.Component {
         })
     }
 
-    handleMyTextareaAutosizeChange = (e) => {
+    // handleMyTextareaAutosizeChange = (e) => {
+    //     this.setState({
+    //         postBody: e.target.value,
+    //         postBodyCount: e.target.value.length,
+    //     })
+    // }
+
+    handleEditorChange = (content, editor) => {
+        console.log(content)
         this.setState({
-            postBody: e.target.value,
-            postBodyCount: e.target.value.length,
+            postBody: content,
         })
     }
 
     fileSelectHandler = event => {
         event.persist()
-        // console.log(event.target.files[0])
         this.setState({
             selectedFile: event.target.files[0]
         })
@@ -62,11 +80,17 @@ class Admin extends React.Component {
 
     async fileUploadHandler() {
 
-        if (!this.state.postBody || //check conditions and put all of them here
-            !this.state.postTitle) {
-            console.log('saiu')
+        if (!this.state.postBody ||
+            !this.state.postTitle ||
+            !this.state.postCategory
+        ) {
+            callFailNotification();
             return;
         }
+
+        this.setState({
+            disableButton: true,
+        })
 
         try {
 
@@ -80,27 +104,19 @@ class Admin extends React.Component {
                     postTitle: this.state.postTitle,
                     postBody: this.state.postBody,
                     selectedFile: this.state.selectedFile,
-                    postCategory: this.state.postCategory
+                    postCategory: this.state.postCategory,
+                    postDate: this.state.postDate,
+                    postLink: Math.random().toString(36).substr(2, 9),
                 })
             });
-            
+
             if (!res.ok) {
                 const awaitError = await res.json()
                 throw awaitError
             }
-            
-            // console.log(res)
-            // console.log(res.json())
-            // let result = await res.json();
-            // if (result && result.success) {
-            //     PostStore.title = result.postTitle;
-            //     PostStore.categoria = result.postCategory;
-            //     PostStore.body = result.postBody;
-            //     PostStore.image = result.selectedFile;
-                // setState is already done individually as they change
-                this.resetForm();
-                // alert(result.msg)
-            // }
+
+            this.resetForm();
+            callSuccessNotification()
         }
 
         catch (e) {
@@ -111,12 +127,14 @@ class Admin extends React.Component {
     render() {
         return (
             <div className="admin_page">
+                <ReactNotification />
                 <div className="title">
                     Kole, Carol! Bora postar? :)
             </div>
                 <div className="title" >
                     <MyTextField
                         label="Título"
+                        value={this.state.postTitle}
                         onChange={(e) => { this.handleTitleChange(e) }}
                     />
                     <MyDropdown
@@ -126,11 +144,31 @@ class Admin extends React.Component {
 
                 </div>
                 <div>
-                    <MyTextareaAutosize
+                    <Editor
+                        apiKey="c1cacqjn3ogkg6sogfxy55s5x5k3n9339y7uqch6ye623gr9"
+                        init={{
+                            // width: '85%',
+                            height: 500,
+                            menubar: true,
+                            plugins: [
+                                'advlist autolink lists link image charmap print preview anchor',
+                                'searchreplace visualblocks code fullscreen',
+                                'insertdatetime media table paste code help wordcount'
+                            ],
+                            toolbar:
+                                'undo redo | formatselect | bold italic backcolor | \
+                                alignleft aligncenter alignright alignjustify | \
+                                bullist numlist outdent indent | removeformat | help'
+                        }}
+                        onEditorChange={this.handleEditorChange}
+                    />
+                    {/* <MyTextareaAutosize
+                        value={this.state.postBody}
                         onChange={(e) => this.handleMyTextareaAutosizeChange(e)}
                     />
-
-                    Number of characters so far: {this.state.postBodyCount}
+                    <br />
+                    Number of characters so far: {this.state.postBodyCount} */}
+                    <br />
                     <br />
                     <input
                         type="file"
@@ -139,13 +177,11 @@ class Admin extends React.Component {
                     />
 
                     <MyButton
-                        label="Upload"
+                        label="Salvar o post"
+                        disabled={this.state.disableButton}
                         onClick={this.fileUploadHandler}
                     />
-                    {/* <FileUpload /> */}
-
                 </div>
-
             </div>
         )
     }

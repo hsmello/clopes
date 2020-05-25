@@ -7,14 +7,19 @@
     background-color: #B39BC8;
     height: 350px;
     box-shadow: black;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .presentation_home {
     width: 50%;
+    min-width: 550px;
+    max-width: 825px;
     height: 220px;
     position: absolute;
-    top: 160px;
-    left: 32%;
+    top: 15px;
+    left: 28%;
     border-style: solid;
     border-color: rgb(141, 120, 160);
     border-radius: 7px;
@@ -41,21 +46,15 @@
 .first_picture {
     position: absolute;
     top: 220px;
-    left: 16%;
+    left: 12%;
     width: 25%;
+    min-width: 220px;
     max-width: 400px;
     border-radius: 7px;
 }
 
-/* @media (max-width: 769px) {
-    .first_picture {
-        width: 100%;
-        margin: 100px 0px 20px;
-    }
-} */
-
 .box_home {
-    margin-top: 290px;
+    margin-top: 18%;
 }
 
 .box_home_title {
@@ -167,6 +166,11 @@ body {
     background-color: #F0EBF4;
 }
 
+.youtube_home {
+    position: relative;
+    margin-left: calc((100% - 560px)/2);
+}
+
 
 /* MOBILE */
 
@@ -174,39 +178,47 @@ body {
     .header_home {
         height: 450px;
     }
-
+    
     .presentation_home {
         border: none;
         width: 95%;
         top: 90px;
         left: 2.5%;
+        min-width: 0px;
     }
-
+    
     .presentation_home_title {
         left: 10px;
         font-size: 23px;
         font-weight: 600;
         text-align: center;
     }
-
+    
     .presentation_home_body {
         left: 10px;
     }
-
+    
     .first_picture {
         width: 80%;
-        left: 10%;
-        top: 380px;
+        max-height: 365px;
+        max-width: 283px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 360px;
+        margin: 0px auto;
     }
-
-
-
+    
+    .box_home {
+        margin-top: 290px;
+    }
 
     .box_home_body {
         flex-direction: column;
         height: 820px
     }
-
+    
     .box_home_first,
     .box_home_second,
     .box_home_third {
@@ -218,7 +230,7 @@ body {
         align-items: center;
         display: flex;
         flex-direction: column;
-    
+        
     }
 
     .box_home_first {
@@ -236,6 +248,11 @@ body {
     a.button {
         position: relative;
         bottom: 0px;
+    }
+    
+    .youtube_home {
+        width: 100%;
+        margin-left: 0;
     }
 
 }

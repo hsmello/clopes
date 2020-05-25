@@ -1,6 +1,6 @@
-/* .ondulindas_allpage {
-    margin-top: 80px;
-} */
+.ondulindas_allpage {
+    /* position: absolute; */
+} 
 
 .page_title {
     display: flex;
@@ -9,19 +9,81 @@
 
 .logo_ondulindas {
     width: 300px;
+    position: absolute;
+    left: 3%;
+    top: 180px;
 }
 
 .page_text {
     font-size: 18px;
-    padding: 20px 50px;
+    padding: 20px 50px 20px 350px;
+    text-align: justify;
 }
 
+.telegram_div {
+    height: 150px;
+    display: block;
+    padding: 85px 0px;
+    justify-content: center;
+}
 
+.telegram_div p {
+    margin: 0px;
+    text-align: center;
+    padding: 10px 0px;
+    font-weight: bold;
+}
 
-.telegram {
-    color: rgb(0, 136, 204);
+.telegram_div a {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    color: #B39BC8;;
 }
 
 .telegram:hover {
-    color: rgb(0, 105, 158);
+    color: rgb(161, 135, 184); ;
+}
+    
+.telegram_div hr {
+    background-color: black;
+    height: 0.1px;
+    width: 300px;
+    border: none;
+    margin: 0px auto;
+    
+}
+
+@media (max-width: 769px) {
+    .page_title {
+        display: none;
+    }
+    .telegram_div {
+        padding: 40px 0px 85px;
+    }
+    .logo_ondulindas {
+        width: 80%;
+        max-width: 320px;
+        padding: 0px;
+        margin: 0px auto;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 60px;
+    }
+    .page_text {
+        margin-top: 270px;
+        padding: 30px;
+    }
+    .telegram_div {
+        height: 100px;
+    }
+    .telegram_div p span {
+        display: block;
+    }
+    .telegram_div hr {
+        width: 200px;
+    }
+
 }

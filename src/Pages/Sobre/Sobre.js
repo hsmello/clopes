@@ -26,9 +26,11 @@ function Sobre() {
                         <br />
                         Aqui no meu site você encontrará estes mesmos assuntos de uma forma mais detalhada, com posts escritos por mim. Seja bem-vindo e espero que goste!
                         <br />
-                        Beijos,
-                        <br />
-                        Carol.
+                        <div className="text_signature">
+                            Beijos,
+                            <br />
+                            Carol.
+                        </div>
                     </div>
 
 

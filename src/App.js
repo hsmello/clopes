@@ -12,6 +12,8 @@ import Sobre from './Pages/Sobre/Sobre';
 import Contato from './Pages/Contato/Contato';
 import Ondulindas from './Pages/Ondulindas/Ondulindas';
 import Cabelos from './Pages/Categorias/Cabelos/Cabelos';
+import CategoryPage from './Pages/Categorias/CategoryPage';
+import IndividualPost from './Pages/Categorias/IndividualPost';
 
 function IsUserLoggedIn() {
   const token = localStorage.getItem('token')
@@ -20,7 +22,7 @@ function IsUserLoggedIn() {
   }
   try {
     const jwtDecoded = jwtDecode(token)
-    console.log(jwtDecoded)
+    // console.log(jwtDecoded)
     return true;
   }
   catch (e) {
@@ -39,6 +41,10 @@ function App() {
         <Route exact path="/contato" component={Contato} />
         <Route exact path="/ondulindas" component={Ondulindas} />
         <Route exact path="/cabelos" component={Cabelos} />
+        <Route exact path="/moda" component={CategoryPage} />
+        <Route exact path="/beleza" component={CategoryPage} />
+        <Route exact path="/entretenimento" component={CategoryPage} />
+        <Route path="/:id/:id" component={IndividualPost} />
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>

@@ -1,4 +1,5 @@
 import React from 'react';
+import MyPagination from '../../../Imports/MyPagination';
 
 export default class Cabelos extends React.Component {
 
@@ -52,35 +53,49 @@ export default class Cabelos extends React.Component {
         for (let i = 0; i < this.state.all.length; i++) {
             if (this.state.all[i].category === 'Entretenimento') {
                 this.state.thisCategory.push(this.state.all[i])
-            } 
+            }
         }
         console.log(this.state.thisCategory)
     }
 
-    render() {
+    sortArray = () => {
+        this.state.thisCategory.sort(function (a, b) {
+            if (a.date === null || b.date === null) {
+                return;
+            }
+            return a.date.getTime() - b.date.getTime()
+        })
+        console.log(this.state.thisCategory)
 
-        
-        return (
-            <div>
-                
-            {/* {this.requestPost}
-            {this.handlePosts} */}
-                
-                <button label="test" onClick={this.requestPost}>
-                    rodar api
-                </button>
+    }
 
-                <button onClick={this.handlePosts} >
-                    filtrar entretenimento
-                </button>
 
-                {/* <div>
-                    {this.state.all[0].title}
-                </div>
+        render() {
+
+
+            return (
                 <div>
-                    {this.state.all[0].body}
-                </div> */}
-            </div>
-        )
+
+                    {/* {this.requestPost}
+            {this.handlePosts} */}
+
+                    <button label="test" onClick={this.requestPost}>
+                        rodar api
+                </button>
+
+                    <button onClick={this.handlePosts} >
+                        filtrar entretenimento
+                </button>
+
+                <button onClick={this.sortArray} >
+                        sort
+                </button>
+
+                <MyPagination 
+                    count={6}
+                />
+
+                </div>
+            )
+        };
     };
-};
