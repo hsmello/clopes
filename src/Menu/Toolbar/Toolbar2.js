@@ -1,20 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Toolbar2.css'
 import Logo from '../../Images/logo_nb.png'
-import Logo_Photo from '../../Images/logo_photo.png'
 import DrawerButton from '../DrawerButton/DrawerButton';
 import { Link } from 'react-router-dom';
-import onClickOutside from "react-onclickoutside";
+// import onClickOutside from "react-onclickoutside";
 
 function Toolbar(props) {
 
-    const [categoriasShow, serCategoriasShow] = useState(false)
+    // const [categoriasShow, serCategoriasShow] = useState(false)
 
-    Toolbar.handleClickOutside = () => serCategoriasShow(false)
-
-    function handleCategoriasClick() {
-        serCategoriasShow(true)
-    }
+    // Toolbar.handleClickOutside = () => serCategoriasShow(false)
 
     const CabelosBlock = () => (
         <>
@@ -28,7 +23,7 @@ function Toolbar(props) {
     const CategoriasBlock = () => (
         <>
             <div className='cabelos_div' >
-                <button>CABELOS ></button>
+                <button>CABELOS</button>
                 <div className="cabelos_suboptions">
                     <CabelosBlock />
                 </div >
@@ -67,8 +62,10 @@ function Toolbar(props) {
     );
 };
 
-const clickOutsideConfig = {
-    handleClickOutside: () => Toolbar.handleClickOutside
-};
+// const clickOutsideConfig = {
+//     handleClickOutside: () => Toolbar.handleClickOutside
+// };
 
-export default onClickOutside(Toolbar, clickOutsideConfig);
+export default Toolbar;
+
+// export default onClickOutside(Toolbar, clickOutsideConfig);

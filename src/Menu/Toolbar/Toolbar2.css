@@ -116,13 +116,16 @@
 
 .cabelos_suboptions a {
     font-size: 13px;
-    background-color: rgb(123, 97, 148);
+    width: 179px;
 }
 
 .cabelos_suboptions {
     display: none;
+    background-color: rgb(123, 97, 148);
+    border-radius: 7px;
     position: absolute;
-    transform: translate(100%, -40px);
+    /* margin-left: 10px; */
+    transform: translate(97%, -47px);
 }
 
 .cabelos_div {

@@ -16,7 +16,13 @@ function SideDrawer(props) {
                 <li><Link to="/sobre" >SOBRE</Link></li>
                 <div className="categorias_sd_title">CATEGORIAS</div>
                 <div className="categorias_sd">
-                    <li> <Link to="/cabelos" >CABELOS</Link> </li>
+                    <div className="cabloes_sd_title"> CABELOS </div>
+                    <div className="cabelos_sd">
+                        <li><Link to="/cabelos-cuidados">Cuidados</Link></li>
+                        <li><Link to="/cabelos-finalizacao">Finalização</Link></li>
+                        <li><Link to="/cabelos-inspiracoes">Inspirações</Link></li>
+                        <li><Link to="/cabelos-produtos-e-resenhas">Produtos e Resenhas</Link></li>
+                    </div>
                     <li> <Link to="/beleza" >BELEZA</Link></li>
                     <li> <Link to="/moda"> MODA</Link></li>
                     <li> <Link to="/entretenimento" >ENTRETENIMENTO</Link></li>

@@ -32,7 +32,7 @@
 }
 
 .side_Drawer li {
-    margin: 0.5rem 0;
+    margin: 0.3rem 0;
 }
 
 .categorias_sd_title,
@@ -54,8 +54,16 @@
     }
 }
 
+.cabloes_sd_title,
 .categorias_sd a {
     font-size: 0.9rem;
+    color: white;
+    letter-spacing: 2px;
     /* background-colo  r: black; */
     margin-left: 15px;
+}
+
+.cabelos_sd a {
+    font-size: 0.8rem;
+    margin-left: 30px;
 }
