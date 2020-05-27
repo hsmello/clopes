@@ -1,10 +1,12 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Categorias.css';
 import GetCategoryPostData from '../Functionalities/GetCategoryPostData';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 import titleArray from './titles.json';
+
+
 
 export default function CategoryPage({ match }) {
 
@@ -20,20 +22,18 @@ export default function CategoryPage({ match }) {
         async function fetchData() {
             const posts = await GetCategoryPostData(match.path.substr(1));
             setData(posts);
-            // setTest(match.path.substr(1))
         }
         fetchData();
         AOS.init({
             duration: 1000,
             once: true,
         });
-
     }, [1]);
 
     return (
         <div>
             <div className="page_title" >
-               {titleIndex ? titleArray[titleIndex].title : ""}
+                {titleIndex ? titleArray[titleIndex].title : ""}
             </div>
             {data.reverse().map((post, index) => {
 

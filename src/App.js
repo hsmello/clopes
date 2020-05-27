@@ -11,7 +11,6 @@ import Home from './Pages/Home/Home';
 import Sobre from './Pages/Sobre/Sobre';
 import Contato from './Pages/Contato/Contato';
 import Ondulindas from './Pages/Ondulindas/Ondulindas';
-import Cabelos from './Pages/Categorias/Cabelos/Cabelos';
 import CategoryPage from './Pages/Categorias/CategoryPage';
 import IndividualPost from './Pages/Categorias/IndividualPost';
 
@@ -21,7 +20,7 @@ function IsUserLoggedIn() {
     return false;
   }
   try {
-    const jwtDecoded = jwtDecode(token)
+    // const jwtDecoded = jwtDecode(token)
     // console.log(jwtDecoded)
     return true;
   }

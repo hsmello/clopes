@@ -5,7 +5,7 @@
 .page_title {
     justify-content: center;
     margin: 20px 0px;
-    font-size: 40px;
+    /* font-size: 40px; */
     font-weight: 600;
 }
 
@@ -53,7 +53,9 @@
 @media (max-width: 769px) {
     .page_title {
         padding: 55px 0px 20px;
-        margin: 20px 0px;
+        display: flex;
+        font-size: 25px !important;
+        text-align: center;
     }
     .post_card {
         width: 90%;

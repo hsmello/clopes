@@ -2,7 +2,6 @@ import React from 'react';
 import MyTextField from '../../Imports/MyTextField';
 import MyDropdown from '../../Imports/MyDropdown';
 import './Admin.css'
-import MyTextareaAutosize from '../../Imports/MyTextareaAutosize';
 import { Editor } from '@tinymce/tinymce-react';
 import ReactNotification from 'react-notifications-component';
 import SuccessNotification from '../Functionalities/SuccessNotification';
@@ -56,13 +55,6 @@ class Admin extends React.Component {
             postCategory: e.target.value
         })
     }
-
-    // handleMyTextareaAutosizeChange = (e) => {
-    //     this.setState({
-    //         postBody: e.target.value,
-    //         postBodyCount: e.target.value.length,
-    //     })
-    // }
 
     handleEditorChange = (content, editor) => {
         console.log(content)
@@ -127,11 +119,13 @@ class Admin extends React.Component {
     render() {
         return (
             <div className="admin_page">
-                <ReactNotification />
+                <div className="post_notification">
+                    <ReactNotification />
+                </div>
                 <div className="title">
-                    Kole, Carol! Bora postar? :)
-            </div>
-                <div className="title" >
+                    Kole, Carol! Bora postar? =)
+                </div>
+                <div className="post_inputs" >
                     <MyTextField
                         label="Título"
                         value={this.state.postTitle}
@@ -139,11 +133,13 @@ class Admin extends React.Component {
                     />
                     <MyDropdown
                         onChange={(e) => this.handleCategoryChange(e)}
-                        value={this.state.postCategory}
-                    />
-
+                        value={this.state.postCategory} />
+                    <input
+                        type="file"
+                        label=""
+                        onChange={this.fileSelectHandler}/>
                 </div>
-                <div>
+                <div className="post_body_editor" >
                     <Editor
                         apiKey="c1cacqjn3ogkg6sogfxy55s5x5k3n9339y7uqch6ye623gr9"
                         init={{
@@ -160,27 +156,13 @@ class Admin extends React.Component {
                                 alignleft aligncenter alignright alignjustify | \
                                 bullist numlist outdent indent | removeformat | help'
                         }}
-                        onEditorChange={this.handleEditorChange}
-                    />
-                    {/* <MyTextareaAutosize
-                        value={this.state.postBody}
-                        onChange={(e) => this.handleMyTextareaAutosizeChange(e)}
-                    />
+                        onEditorChange={this.handleEditorChange} />
                     <br />
-                    Number of characters so far: {this.state.postBodyCount} */}
-                    <br />
-                    <br />
-                    <input
-                        type="file"
-                        label=""
-                        onChange={this.fileSelectHandler}
-                    />
-
                     <MyButton
-                        label="Salvar o post"
+                        label="Publicar"
                         disabled={this.state.disableButton}
-                        onClick={this.fileUploadHandler}
-                    />
+                        onClick={this.fileUploadHandler}/>
+                    <br />
                 </div>
             </div>
         )
