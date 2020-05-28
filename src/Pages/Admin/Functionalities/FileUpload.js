@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MyButton from '../../../Imports/MyButton';
+import APIBaseUrl from '../Functionalities/API';
 
 export default class FileUpload extends Component {
 
@@ -22,7 +23,7 @@ export default class FileUpload extends Component {
 
         try {
 
-            let res = await fetch('http://localhost:3001/admin', {
+            let res = await fetch(APIBaseUrl + '/admin', {
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',

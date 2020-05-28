@@ -1,7 +1,9 @@
+import APIBaseUrl from './API.js';
+
 async function GetIndividualPostData(postLink) {
 
     try {
-        const res = await fetch('http://localhost:3001/requestPost?postLink=' + postLink, {
+        const res = await fetch(APIBaseUrl + '/requestPost?postLink=' + postLink, {
             method: 'get',
             headers: {
                 'Accept': 'application/json',

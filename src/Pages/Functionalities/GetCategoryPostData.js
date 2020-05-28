@@ -1,7 +1,9 @@
+import APIBaseUrl from './API.js';
+
 async function GetCategoryPostData(category) {
 
     try {
-        const res = await fetch('http://localhost:3001/requestCategory?category=' + category, {
+        const res = await fetch(APIBaseUrl + '/requestCategory?category=' + category, {
             method: 'get',
             headers: {
                 'Accept': 'application/json',

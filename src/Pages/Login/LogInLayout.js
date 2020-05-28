@@ -3,6 +3,7 @@ import UserStore from './UserStore'
 import MyTextField from '../../Imports/MyTextField';
 import MyButton from '../../Imports/MyButton';
 import './LogInLayout.css'
+import APIBaseUrl from '../Functionalities/API';
 
 class LogInLayout extends React.Component {
 
@@ -50,7 +51,7 @@ class LogInLayout extends React.Component {
 
         try {
 
-            let res = await fetch('http://localhost:3001/login', {
+            let res = await fetch(APIBaseUrl + '/login', {
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',

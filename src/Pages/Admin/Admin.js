@@ -7,6 +7,7 @@ import ReactNotification from 'react-notifications-component';
 import SuccessNotification from '../Functionalities/SuccessNotification';
 import FailNotification from '../Functionalities/FailNotification';
 import MyButton from '../../Imports/MyButton';
+import APIBaseUrl from '../Functionalities/API';
 
 const callSuccessNotification = SuccessNotification();
 const callFailNotification = FailNotification();
@@ -86,7 +87,7 @@ class Admin extends React.Component {
 
         try {
 
-            let res = await fetch('http://localhost:3001/admin', {
+            let res = await fetch(APIBaseUrl + '/admin', {
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',
