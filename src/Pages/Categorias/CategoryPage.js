@@ -37,18 +37,22 @@ export default function CategoryPage({ match }) {
             </div>
             {data.reverse().map((post, index) => {
 
-                let TYPED_ARRAY = new Uint8Array(post.image.data);
+                let imageUrl = null
 
-                const STRING_CHAR = String.fromCharCode.apply(null, TYPED_ARRAY);
-                let base64String = btoa(STRING_CHAR);
+                if (post.image.data) {
+                    let TYPED_ARRAY = new Uint8Array(post.image.data);
 
-                let imageUrl = `data:image/jpeg;base64,${base64String}`
+                    const STRING_CHAR = String.fromCharCode.apply(null, TYPED_ARRAY);
+                    let base64String = btoa(STRING_CHAR);
 
-                // console.log(post)
-                let buffer = post.image.data
-                let b64 = new Buffer.from(buffer).toString('base64')
-                let mimeType = 'image/jpeg'
-                // console.log(`data:${mimeType};base64,${b64}`)
+                    imageUrl = `data:image/jpeg;base64,${base64String}`
+
+                    // console.log(post)
+                    let buffer = post.image.data
+                    let b64 = new Buffer.from(buffer).toString('base64')
+                    let mimeType = 'image/jpeg'
+                    // console.log(`data:${mimeType};base64,${b64}`)
+                }
 
                 return (
                     <div className="post_card" data-aos="fade-up" key={index}>
@@ -68,7 +72,10 @@ export default function CategoryPage({ match }) {
                                 {'ver mais'}
                             </p>
                             {/* </div> */}
-                            <img width="100px" height="100px" className="post_image" src={imageUrl} alt="" />
+                            {imageUrl === null ?
+                                "" :
+                                <img width="100px" height="100px" className="post_image" src={imageUrl} alt="" />
+                            }
                         </Link>
                     </div>
                 )

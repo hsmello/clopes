@@ -74,8 +74,7 @@ class Admin extends React.Component {
 
         if (!this.state.postBody ||
             !this.state.postTitle ||
-            !this.state.postCategory
-        ) {
+            !this.state.postCategory) {
             callFailNotification();
             return;
         }
