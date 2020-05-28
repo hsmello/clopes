@@ -1,3 +1,7 @@
-let APIBaseUrl = process.env.APIBaseUrl || "http://localhost:3001";
-console.log(process.env)    
+let APIBaseUrl = "http://localhost:3001";
+
+if (process.env.NODE_ENV === 'production') {
+    APIBaseUrl = 'https://clopes-api.herokuapp.com'
+} 
+
 export default APIBaseUrl;
