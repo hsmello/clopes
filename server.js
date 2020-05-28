@@ -13,4 +13,5 @@ app.get('*', (req, res) => {
 });
 
 const port = process.env.PORT || 5000;
+console.log(process.env)
 app.listen(port);
