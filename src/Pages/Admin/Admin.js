@@ -58,7 +58,6 @@ class Admin extends React.Component {
     }
 
     handleEditorChange = (content, editor) => {
-        console.log(content)
         this.setState({
             postBody: content,
         })
@@ -114,6 +113,9 @@ class Admin extends React.Component {
 
         catch (e) {
             console.log(e)
+            this.setState({ 
+                disableButton: false
+             })
         }
     }
 

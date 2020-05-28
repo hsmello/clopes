@@ -54,7 +54,7 @@ function Home() {
                         <p className="box_p">
                             No YouTube dá pra entrar em mais detalhes e ir a fundo em diversos tópicos! Lá o engajamento tem ficado bem divertido. Acompanhe a gente por lá também!
                         </p>
-                        <a className="second button" href="https://www.youtube.com/channel/UCSY90ryrZQIgVkeVfNzZmXA" target="_blank">
+                        <a className="second button" href="https://www.youtube.com/channel/UCSY90ryrZQIgVkeVfNzZmXA" target="_blank" rel="noopener noreferrer">
                             SIGA O MEU CANAL
                         </a>
                     </div>
