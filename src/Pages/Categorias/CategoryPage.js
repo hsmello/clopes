@@ -35,7 +35,7 @@ export default function CategoryPage({ match }) {
             <div className="page_title" >
                 {titleIndex ? titleArray[titleIndex].title : ""}
             </div>
-            {data.reverse().map((post, index) => {
+            {(data || []).reverse().map((post, index) => {
 
                 let imageUrl = null
 
