@@ -13,7 +13,7 @@ class Login extends React.Component {
     async componentDidMount() {
         try {
 
-            let res = await fetch('/isLoggedIn', {
+            let res = await fetch(APIBaseUrl + '/isLoggedIn', {
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',
@@ -43,7 +43,7 @@ class Login extends React.Component {
 
         try {
 
-            let res = await fetch('/logout', {
+            let res = await fetch(APIBaseUrl + '/logout', {
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',

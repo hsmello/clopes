@@ -85,7 +85,7 @@ class Admin extends React.Component {
 
         try {
 
-            let res = await fetch('/admin', {
+            let res = await fetch(APIBaseUrl + '/admin', {
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',

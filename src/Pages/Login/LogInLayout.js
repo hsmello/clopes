@@ -51,7 +51,7 @@ class LogInLayout extends React.Component {
 
         try {
 
-            let res = await fetch('/login', {
+            let res = await fetch(APIBaseUrl + '/login', {
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',
