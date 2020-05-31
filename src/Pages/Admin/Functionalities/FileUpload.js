@@ -23,7 +23,7 @@ export default class FileUpload extends Component {
 
         try {
 
-            let res = await fetch(APIBaseUrl + '/admin', {
+            let res = await fetch('/admin', {
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',
