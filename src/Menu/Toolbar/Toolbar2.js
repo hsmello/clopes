@@ -47,6 +47,7 @@ function Toolbar(props) {
                 <div className="menu_options">
 
                     <Link to="/sobre" >SOBRE</Link>
+                    <Link to="/ebook" >EBOOK</Link>
                     <div className="categorias">
                         <button
                         >CATEGORIAS</button>

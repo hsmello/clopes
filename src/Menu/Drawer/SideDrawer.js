@@ -14,6 +14,7 @@ function SideDrawer(props) {
             <h2 className="menu_title">MENU</h2>
             <ul>
                 <li><Link to="/sobre" >SOBRE</Link></li>
+                <li><Link to="/ebook" >SOBRE</Link></li>
                 <div className="categorias_sd_title">CATEGORIAS</div>
                 <div className="categorias_sd">
                     <div className="cabloes_sd_title"> CABELOS </div>

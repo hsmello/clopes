@@ -28,7 +28,7 @@ export default function Ondulindas() {
                    </p> <hr/>
                 <a
                     className="telegram"
-                    href="https://twitter.com/CarolLopesblog"
+                    href="https://t.me/joinchat/O16hhVRqBL42s_Kq2eo-Ow"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

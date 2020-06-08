@@ -38,7 +38,7 @@ function Home() {
                             Instagram
                         </div>
                         <p className="box_p">
-                            No instagram você pode acompanhar bem de perto o meu dia-a-dia e dicas sobre o como valorizar quem você realmente é
+                            No instagram você encontra dicas sobre como valorizar o seu cabelo natural e pode acompanhar bem de perto o meu dia-a-dia 
                         </p>
                         <a className="first button" href="/">
                             ACOMPANHE O MEU INSTA
@@ -52,7 +52,7 @@ function Home() {
                             YouTube
                         </div>
                         <p className="box_p">
-                            No YouTube dá pra entrar em mais detalhes e ir a fundo em diversos tópicos! Lá o engajamento tem ficado bem divertido. Acompanhe a gente por lá também!
+                            No YouTube dá pra entrar em mais detalhes e ir a fundo em diversos tópicos! Não deixe de acompanhar a gente por lá também!
                         </p>
                         <a className="second button" href="https://www.youtube.com/channel/UCSY90ryrZQIgVkeVfNzZmXA" target="_blank" rel="noopener noreferrer">
                             SIGA O MEU CANAL

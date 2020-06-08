@@ -18,20 +18,20 @@ function Footer() {
                     <InstagramIcon fontSize="large" />
                 </a>
                 <a
-                    className="twitter social"
-                    href="https://twitter.com/CarolLopesblog"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <TwitterIcon fontSize="large"  />
-                </a>
-                <a
                     className="youtube social"
                     href="https://www.youtube.com/channel/UCSY90ryrZQIgVkeVfNzZmXA"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     <YouTubeIcon fontSize="large"  />
+                </a>
+                <a
+                    className="twitter social"
+                    href="https://twitter.com/CarolLopesblog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <TwitterIcon fontSize="large"  />
                 </a>
      
 

@@ -71,7 +71,7 @@
 }
 
 .menu_options :hover {
-    color: rgb(120, 96, 141);;
+    color: rgb(120, 96, 141);
 }
 
 .menu_options a, /* <Link> */
@@ -121,7 +121,7 @@
 
 .cabelos_suboptions {
     display: none;
-    background-color: rgb(123, 97, 148);
+    background-color: rgb(144, 120, 165);
     border-radius: 7px;
     position: absolute;
     /* margin-left: 10px; */

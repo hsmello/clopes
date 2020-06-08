@@ -7,18 +7,19 @@
 .title {
     font-size: 30px;
     font-weight: 600;
+    margin-left: 10px;
 }
 
 .subtitle {
     font-size: 25px;
     font-weight: 500;
-    margin: 15px 0px 0px 15px;
+    margin: 15px 0px 0px 25px;
 }
 
 .text {
     font-size: 18px;
     font-weight: 400;
-    margin: 10px 30px 40px;
+    margin: 10px 30px 45px;
     text-align: justify;
 }
 

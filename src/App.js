@@ -9,6 +9,7 @@ import Login from './Pages/Login/Login';
 import Admin from './Pages/Admin/Admin';
 import Home from './Pages/Home/Home';
 import Sobre from './Pages/Sobre/Sobre';
+import Ebook from './Pages/Ebook/Ebook';
 import Contato from './Pages/Contato/Contato';
 import Ondulindas from './Pages/Ondulindas/Ondulindas';
 import CategoryPage from './Pages/Categorias/CategoryPage';
@@ -36,6 +37,7 @@ function App() {
       <>
         <Route exact path="/home" component={Home} />
         <Route exact path="/sobre" component={Sobre} />
+        <Route exact path="/ebook" component={Ebook} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/contato" component={Contato} />
         <Route exact path="/ondulindas" component={Ondulindas} />
