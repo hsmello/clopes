@@ -66,7 +66,7 @@ function Home() {
                             Aqui!
                         </div>
                         <p className="box_p">
-                            Selecione a categoria que quer ver sobre e fique por dentro do conteúdo! <br /> Para mais detalhes de contato, parceria ou depoimentos, clique no botão abaixo.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                         </p>
                         <a className="third button" href="/contato">
                             CONTATO

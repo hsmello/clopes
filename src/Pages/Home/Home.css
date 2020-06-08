@@ -64,6 +64,7 @@
 
 .box_home_body {
     width: 70%;
+    min-width: 750px;
     height: 250px;
     margin: 20px auto 100px;
     display: flex;
@@ -159,6 +160,7 @@ a.button {
     letter-spacing: 2px;
     color: #F0EBF4;
     text-decoration: none;
+    margin: 0px auto;
 }
 
 
@@ -171,6 +173,18 @@ body {
     margin-left: calc((100% - 560px)/2);
 }
 
+
+@media (min-width: 770px) and (max-width: 1300px) {
+    .box_home_body {
+        width: 90%;
+        /* height: 300px; */
+    }
+    .box_home_body a {
+        font-size: 13px;
+        margin: 0px auto;
+        /* background-color: lawngreen; */
+    }
+}
 
 /* MOBILE */
 
@@ -216,7 +230,10 @@ body {
 
     .box_home_body {
         flex-direction: column;
-        height: 820px
+        height: 820px;
+        width: 100%;
+        max-width: 290px;
+        min-width: 100px;
     }
     
     .box_home_first,

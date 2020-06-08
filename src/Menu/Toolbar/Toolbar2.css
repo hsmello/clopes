@@ -136,6 +136,24 @@
    display: block;
 }
 
+@media (min-width: 770px) and (max-width: 1150px) {
+    .menu_options a, /* <Link> */
+    .menu_options button {
+        padding: 10px 8px;
+        font-size: 21px;
+    }
+    .categorias_options button,
+    .categorias_options a{
+    font-size: 18px;
+    color: white;
+    }
+
+    .cabelos_suboptions a {
+        font-size: 13px;
+        width: 179px;
+    }
+}
+
 @media (max-width: 769px) {
     .menu_options {
         display: none;
